@@ -1,0 +1,36 @@
+#ti{
+    text-align: center;
+}
+button{
+    background-color: darkblue;
+    width:20%;
+    height: 10%;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: 0px;
+}
+#btns{
+    /* display: flex;
+    justify-content: center;
+    padding-left: auto;
+    padding-right: auto; */
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+#gs, #gp, #gi{
+    width: 2cm;
+    height: 20%;
+}
+#gamePad{
+    display: flex;
+    justify-content: center;
+}
+#showCheat{
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+#showCheat:hover{
+    text-decoration-line: none;
+}

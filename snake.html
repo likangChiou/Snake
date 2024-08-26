@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>貪食蛇</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!--引入Abr2d遊戲引擎，這是壓縮過的檔案(原檔有1933行，大了超過兩倍)-->
+        <!--Abr2d引擎是我升高一的這個暑假開始自己開發的JavaScript引擎
+            使用的是HTML 5的Canvas技術，目的是要讓遊戲開發更簡單-->
+        <script src="Abr2D.1.0.min.js"></script>
+        <link rel="stylesheet" href="snake.css">
+    </head>
+    <body>
+        <div id="ti">
+            <h1>歡迎玩我的貪食蛇!</h1>
+            <p>
+                遊戲方法:<br>
+                    上下左右鍵控制蛇，<img src="food.gif">是食物，要控制蛇去吃<br>
+                    <img src="body.gif">是蛇的身體，<img src="head.gif">則是頭，只有頭吃到才有效<br>
+                    撞到牆會從另一邊出來，不會怎樣，但是撞到身體就遊戲結束<br>
+            </p>
+            <h2 id="showCheat">作弊專區(點擊顯示)</h2>
+            <div id="cheat">
+                我會做遊戲，但不太會玩，所以我做的遊戲都有一些作弊功能
+                <h4>1.對準用線</h4>
+                在遊戲中按住<kbd>c</kbd>就可以在蛇頭顯示兩條白線:一條垂直，一條水平，可以幫忙對準食物
+                <h4>2.放慢速度</h4>
+                遊戲速度會隨分數而提高，按下<kbd>F12</kbd>，切到「主控台(或Console)」分頁，輸入<code>speed = 6</code>
+                就可以回復原來的速度
+            </div>
+            <button id="strt">開始遊戲</button>
+        </div>
+        <div id="gamePad">
+            
+            <div id="game" style="height: 800px;width: 1200px;">
+            </div>
+            <div id="btns">
+                <button onclick="javascript:game.init();game.run()" id="gs">start</button><br>
+                <button onclick="javascript:game.pause(); $('#gp').toggle();$('#gi').toggle()" id="gp">pause</button><br>
+                <button onclick="javascript:game.init(); $('#gi').toggle(); $('#gp').toggle()" id="gi">restart</button>
+            </div>
+        </div>
+        <script src="snake.js">
+        </script>
+        
+    </body>
+</html>
